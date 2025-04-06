@@ -108,26 +108,19 @@ social_preview_image: # string, local or CORS resources
 toc: true
 
 comments:
-  # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
-  # The provider options are as follows:
-  disqus:
-    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
-  utterances:
-    repo: # <gh-username>/<repo>
-    issue_term: # < url | pathname | title | ...>
-  # Giscus options › https://giscus.app
+  provider: giscus  # 启用 Giscus
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
-    mapping: # optional, default to 'pathname'
-    strict: # optional, default to '0'
-    input_position: # optional, default to 'bottom'
-    lang: # optional, default to the value of `site.lang`
-    reactions_enabled: # optional, default to the value of `1`
+    repo: Ashiftmaker/ashiftmaker.github.io  # 格式：<GitHub用户名>/<仓库名>
+    repo_id: R_kgDOKjLQZg  # 仓库的 ID（获取方法见下文）
+    category: Announcements  # GitHub Discussions 分类名
+    category_id: DIC_kwDOKjLQZs4Cf5vK  # 分类的 ID（获取方法见下文）
+    mapping: pathname  # 评论与文章关联方式（推荐用 pathname）
+    strict: 0  # 是否严格匹配
+    reactions_enabled: 1  # 启用表情反应
+    emit_metadata: 0
+    input_position: bottom  # 评论框位置（top/bottom）
+    lang: zh-CN  # 评论界面语言
+    reactions_enabled: 1 # optional, default to the value of `1`
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
